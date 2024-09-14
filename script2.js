@@ -19,6 +19,10 @@ const galleryBtn = document.querySelector('.galleryShow')
 bgVideo.play()
 showImgBtn.style.opacity = 0
 galleryBtn.style.visibility = 'hidden'
+if(sessionStorage.getItem('authenticated') != 'true'){
+    console.log(sessionStorage.getItem('authenticated'))
+    window.location.href = 'index.html'
+}
 setTimeout(() => {
     galleryBtn.style.visibility = 'visible'
     showImgBtn.animate(btnSlide, btnSlideTime)
