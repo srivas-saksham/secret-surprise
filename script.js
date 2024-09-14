@@ -28,9 +28,10 @@ video2.pause()
 submit.addEventListener('click', () => {
     passCheck()
     if(passValid == true){
+        sessionStorage.setItem('authenticated','true')
+        console.log(sessionStorage.getItem('authenticated'))
         passValidTrue()
         HBD()
-        title.innerText = "Happiest Birthday Kajju!"
     }
     else{
         passValidFalse()
@@ -41,6 +42,8 @@ password.addEventListener('keydown', (e) => {
     if(e.key == enter){
         submit.animate(enterSubmit, enterSubmitTiming)
         if(passValid == true){
+            sessionStorage.setItem('authenticated','true')
+            console.log(sessionStorage.getItem('authenticated'))
             enter = 'nothing'
             passValidTrue()
             HBD()
@@ -86,6 +89,7 @@ function passValidFalse(){
 }
 function HBD(){
     if (currDateN.getDate() == 15 && currDateN.getMonth() == 8){
+        title.innerText = "Happiest Birthday Kajju!"
         HBDL.classList.remove("hide")
         HBDL.play()
         setTimeout(() => {
@@ -112,7 +116,8 @@ function HBD(){
     }
     else{
         setTimeout(() => {
-            anchorBtn.click()
+            window.location.href = 'index2.html'
+            // anchorBtn.click()
         },3000)
     }
 }
