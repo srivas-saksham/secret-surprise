@@ -33,7 +33,6 @@ body{
 main{
     width: min(1900px, 98vw);
     transform: translateY(525px);
-    
 }
 #bgVideo3{
     height: 100vh;
@@ -90,8 +89,8 @@ main{
 .sliderShow{
     height: 40px;
     width: 270px;
-    position: relative;
-    top: 50%;
+    position: fixed;
+    bottom: 0vh;
     left: 50%;
     transform: translate(-50%, -320px);
     color: var(--rose-pompadour);
@@ -114,8 +113,8 @@ main{
 .sliderShowArrow{
     height: 40px;
     width: 41px;
-    position: relative;
-    top: 50%;
+    position: fixed;
+    bottom: 0vh;
     left: 50%;
     transform: translate(-50%, -320px);
     color: var(--rose-pompadour);
