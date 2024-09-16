@@ -47,7 +47,6 @@ password.addEventListener('keydown', (e) => {
             enter = 'nothing'
             passValidTrue()
             HBD()
-            title.innerText = "Happiest Birthday Kajju!"
         }
         else{
             passValidFalse()
