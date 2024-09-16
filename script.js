@@ -20,7 +20,7 @@ let anchorBtn = document.querySelector('.anchorBtn')
 let credit = document.querySelector('.credit')
 let enter = 'Enter'
 
-var currDateN = new Date(2024,8,15)
+var currDateN = new Date()
 credit.style.visibility = 'hidden'
 video1.pause()
 video2.pause()
